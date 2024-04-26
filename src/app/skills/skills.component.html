@@ -1,5 +1,5 @@
 <div class="divider">Skills</div>
-<div id="skills" class="flex flex-wrap mx-8 gap-8">
+<div id="skills" class="flex flex-wrap mx-8 gap-8 min-w-20">
     @for (skill of skills; track $index) {
         <div class="card flex-wrap bg-base-100 shadow-xl image-full md:mx-4 w-48">
             <figure><img src={{skill.logo_url}} alt={{skill.alt_text}} /></figure>
