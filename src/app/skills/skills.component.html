@@ -1,0 +1,13 @@
+<div class="divider">Skills</div>
+<div id="skills" class="flex justify-center mx-4">
+    <div class="flex flex-wrap justify-center gap-4">
+    @for (skill of skills; track $index) {
+        <div class="card flex-wrap bg-base-100 shadow-xl image-full md:mx-4 w-48">
+            <figure><img src={{skill.logo_url}} alt={{skill.alt_text}} /></figure>
+            <div class="card-body flex justify-center items-center text-center">
+                <h2 class="card-title">{{skill.name}}</h2>
+            </div>
+        </div>
+    }
+    </div>
+</div>
