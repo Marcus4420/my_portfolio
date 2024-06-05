@@ -22,7 +22,7 @@ export interface Tech {
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.css']
 })
-export class SkillsComponent implements AfterViewInit {
+export class SkillsComponent {
 
   public skills: Language[] = [
     { name: "TypeScript", logo_url: "assets/skills/typescript.svg", alt_text: "TypeScript logo", skill_level: "Advanced" },
@@ -41,22 +41,4 @@ export class SkillsComponent implements AfterViewInit {
     { name: "Laravel", logo_url: "assets/skills/laravel.svg", alt_text: "Laravel logo", skill_level: "Intermediate" },
     { name: "Kubernetes", logo_url: "assets/skills/kubernets.svg", alt_text: "Kubernetes logo", skill_level: "Beginner" },
   ];
-
-  private observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      console.log(entry);
-      if (entry.isIntersecting) {
-        entry.target.classList.add("animate-fade-up", "animate-once", "animate-duration-[1250ms]", "animate-ease-out");
-        this.observer.unobserve(entry.target);
-      }
-    });
-  });
-
-  ngAfterViewInit() {
-    const animateme = document.querySelectorAll(".animated-into-view");
-    console.log(animateme.length);
-    animateme.forEach((element) => {
-      this.observer.observe(element);
-    });
-  }
 }

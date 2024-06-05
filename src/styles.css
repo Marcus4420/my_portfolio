@@ -14,7 +14,21 @@
                     linear-gradient(0deg, var(--colora) 0%, var(--colora2) 100%) border-box;
         border: solid 40px transparent;
     }
-    .animated-into-view {
-        @apply animate-wiggle animate-infinite animate-duration-[10000ms] animate-ease-out;
+
+    .spacer {
+        aspect-ratio: 900/300;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .wave1 {
+        background-image: url(./assets/waves/orange-blue-haikei.svg);
+    }
+    .wave2 {
+        background-image: url(./assets/waves/orange-teal-haikei.svg);
+    }
+    .wave3 {
+        background-image: url(./assets/waves/teal-gold-haikei.svg);
     }
 }

@@ -1,34 +1,37 @@
-<div class="divider text-2xl font-bold my-8 animated-into-view">Skills</div>
-<div id="skills" class="flex flex-wrap justify-center gap-8 mx-8 animated-into-view">
-    @for (skill of skills; track $index) {
-        <div class="rounded-lg border-2 border-white p-1 transition-transform transform hover:scale-105">
-            <div class="card bg-base-100 shadow-xl w-60 h-full flex flex-col justify-between">
-                <figure class="flex justify-center p-4">
-                    <!--Udskift RUST billedet - Det flyder over -->
-                    <img srcset="{{skill.logo_url}}" alt="{{skill.alt_text}}" class="w-24 h-24 object-contain" />
-                </figure>
-                <div class="card-body flex flex-col justify-center items-center text-center p-4">
-                    <h2 class="card-title text-lg font-semibold">{{skill.name}}</h2>
-                    <div class="badge badge-outline mt-2">{{skill.skill_level}}</div>
+<div class="bg-[#ff4500]">
+    <div class="divider text-2xl mt-0 py-4 font-bold animated-into-view">Skills</div>
+    <div id="skills" class="flex flex-wrap justify-center gap-8 mx-8 animated-into-view">
+        @for (skill of skills; track $index) {
+            <div class="rounded-lg border-2 border-white p-1 transition-transform transform hover:scale-105">
+                <div class="card bg-base-100 shadow-xl w-60 h-full flex flex-col justify-between">
+                    <figure class="flex justify-center p-4">
+                        <!--Udskift RUST billedet - Det flyder over -->
+                        <img srcset="{{skill.logo_url}}" alt="{{skill.alt_text}}" class="w-24 h-24 object-contain" />
+                    </figure>
+                    <div class="card-body flex flex-col justify-center items-center text-center p-4">
+                        <h2 class="card-title text-lg font-semibold">{{skill.name}}</h2>
+                        <div class="badge badge-outline mt-2">{{skill.skill_level}}</div>
+                    </div>
                 </div>
             </div>
-        </div>
-    }
-</div>
+        }
+    </div>
 
-<div class="divider text-2xl font-bold my-8">Frameworks & Tools</div>
-<div id="frameworks" class="flex flex-wrap justify-center gap-8 mx-8 animated-into-view">
-    @for (tech of techs; track $index) {
-        <div class="rounded-lg border-2 border-white p-1 transition-transform transform hover:scale-105">
-            <div class="card bg-base-100 shadow-xl w-60 h-full flex flex-col justify-between">
-                <figure class="flex justify-center p-4">
-                    <img srcset="{{tech.logo_url}}" alt="{{tech.alt_text}}" class="w-24 h-24 object-contain" />
-                </figure>
-                <div class="card-body flex flex-col justify-center items-center text-center p-4">
-                    <h2 class="card-title text-lg font-semibold">{{tech.name}}</h2>
-                    <div class="badge badge-outline mt-2">{{tech.skill_level}}</div>
+    <div class="divider text-2xl font-bold my-8">Frameworks & Tools</div>
+    <div id="frameworks" class="flex flex-wrap justify-center gap-8 mx-8 animated-into-view">
+        @for (tech of techs; track $index) {
+            <div class="rounded-lg border-2 border-white p-1 transition-transform transform hover:scale-105">
+                <div class="card bg-base-100 shadow-xl w-60 h-full flex flex-col justify-between">
+                    <figure class="flex justify-center p-4">
+                        <img srcset="{{tech.logo_url}}" alt="{{tech.alt_text}}" class="w-24 h-24 object-contain" />
+                    </figure>
+                    <div class="card-body flex flex-col justify-center items-center text-center p-4">
+                        <h2 class="card-title text-lg font-semibold">{{tech.name}}</h2>
+                        <div class="badge badge-outline mt-2">{{tech.skill_level}}</div>
+                    </div>
                 </div>
             </div>
-        </div>
-    }
+        }
+    </div>
 </div>
+<div class="spacer wave2"></div>
