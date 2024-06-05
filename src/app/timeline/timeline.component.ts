@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-timeline',
@@ -7,6 +7,5 @@ import { Component } from '@angular/core';
   templateUrl: './timeline.component.html',
   styleUrl: './timeline.component.css'
 })
-export class TimelineComponent {
-
+export class TimelineComponent{
 }

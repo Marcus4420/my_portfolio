@@ -8,16 +8,13 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-  public scrollToHome() {
-    document.getElementById("home")?.scrollIntoView({behavior: "smooth"});
-  }
-  public scrollToSkills() {
-    document.getElementById("skills")?.scrollIntoView({behavior: "smooth"});
-  }
-  public scrollToProjects() {
-    document.getElementById("projects")?.scrollIntoView({behavior: "smooth"});
-  }
-  public scrollToContact() {
-    document.getElementById("contact")?.scrollIntoView({behavior: "smooth"});
+  darkMode = false;
+  toggleDarkMode() {
+    this.darkMode = !this.darkMode;
+    if (this.darkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
   }
 }
