@@ -15,6 +15,13 @@ export interface Tech {
   skill_level: "Beginner" | "Intermediate" | "Proficient" |"Advanced";
 }
 
+export interface Tools {
+  name: string;
+  logo_url: string;
+  alt_text: string;
+  skill_level: "Beginner" | "Intermediate" | "Proficient" |"Advanced";
+}
+
 @Component({
   selector: 'app-skills',
   standalone: true,
@@ -39,6 +46,10 @@ export class SkillsComponent {
     { name: "NextJS", logo_url: "assets/skills/next-js.svg", alt_text: "NextJS logo", skill_level: "Proficient" },
     { name: "Vue", logo_url: "assets/skills/vue.svg", alt_text: "Vue logo", skill_level: "Intermediate" },
     { name: "Laravel", logo_url: "assets/skills/laravel.svg", alt_text: "Laravel logo", skill_level: "Intermediate" },
+  ];
+  
+  public tools: Tools[] = [
+    { name: "Docker", logo_url: "assets/skills/docker.svg", alt_text: "Docker logo", skill_level: "Intermediate" },
     { name: "Kubernetes", logo_url: "assets/skills/kubernets.svg", alt_text: "Kubernetes logo", skill_level: "Beginner" },
   ];
-}
+  }
