@@ -51,5 +51,7 @@ export class SkillsComponent {
   public tools: Tools[] = [
     { name: "Docker", logo_url: "assets/skills/docker.svg", alt_text: "Docker logo", skill_level: "Intermediate" },
     { name: "Kubernetes", logo_url: "assets/skills/kubernets.svg", alt_text: "Kubernetes logo", skill_level: "Beginner" },
+    { name: "Git", logo_url: "assets/skills/git.svg", alt_text: "Git logo", skill_level: "Intermediate" },
+    { name: "JUnit 5" , logo_url: "assets/skills/JUnit.svg", alt_text: "JUnit 5 logo", skill_level: "Intermediate" },
   ];
   }

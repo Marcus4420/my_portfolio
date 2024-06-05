@@ -55,7 +55,7 @@ export class ProjectsComponent {
     },
     {
       name: "DroneDudes",
-      image_url: '',
+      image_url: 'assets/projects/dronedudes.png',
       description: "A software system for controlling an assembly system simulation, supporting drone production and multiple robot scalability.",
       start_date: "Present",
       status: "In Progress",
