@@ -1,18 +1,28 @@
 <div class="divider">Projects</div>
-<div id="projects" class="bg-base-200">
-    <div class="grid grid-cols-1 gap-8 mx-auto sm:grid-cols-2">
-            @for (project of projects; track $index) {
-                <div class="card card-compact bg-base-100 shadow-xl">
-                    <figure><img class="w-full h-96" src={{project.image_url}} alt={{project.name}} /></figure>
-                    <div class="card-body">
-                      <h2 class="card-title">{{project.name}}</h2>
-                      <p>{{project.description}}</p>
-                      <div class="card-actions justify-end">
-                        <button class="btn btn-primary">See code</button>
+<div id="projects" class="bg-base-200 py-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          @for (project of projects; track $index) {
+              <div class="rounded-lg bg-gradient-to-r from-green-400 to-blue-500 p-1 transition-transform transform hover:scale-105">
+                  <div class="card bg-base-100 shadow-xl h-full flex flex-col">
+                      <figure class="flex justify-center p-4">
+                          <img class="w-full h-48 object-cover rounded-t-lg" src={{project.image_url}} alt="{{project.name}}" />
+                      </figure>
+                      <div class="card-body flex flex-col justify-between p-4">
+                          <h2 class="card-title text-lg font-semibold">{{project.name}}</h2>
+                          <p class="text-sm my-2">{{project.description}}</p>
+                          <div class="text-xs text-gray-500 my-1">
+                              <p>Status: <span class="font-medium">{{project.status}}</span></p>
+                              <p>Context: <span class="font-medium">{{project.context}}</span></p>
+                              <p>Techs: <span class="font-medium">{{project.techs.join(', ')}}</span></p>
+                          </div>
+                          <div class="card-actions justify-end mt-4">
+                              <a href="{{project.github_url}}" class="btn btn-primary" target="_blank">See code</a>
+                          </div>
                       </div>
-                    </div>
                   </div>
-            }
-        </div>
-
+              </div>
+          }
+      </div>
+  </div>
 </div>

@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --colorbody: #ffffff; /* example color */
+    --colora: #ff7e5f; /* example gradient start color */
+    --colora2: #feb47b; /* example gradient end color */
+}
+
+@layer base {
+    .gradient-border {
+        background: linear-gradient(var(--colorbody), var(--colorbody)) padding-box,
+                    linear-gradient(0deg, var(--colora) 0%, var(--colora2) 100%) border-box;
+        border: solid 40px transparent;
+    }
+}
