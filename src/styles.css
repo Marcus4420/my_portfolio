@@ -6,6 +6,7 @@
     --colorbody: #ffffff; /* example color */
     --colora: #ff7e5f; /* example gradient start color */
     --colora2: #feb47b; /* example gradient end color */
+    background-color: white;
 }
 
 @layer base {

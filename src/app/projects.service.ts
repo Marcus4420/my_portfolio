@@ -1,26 +1,44 @@
-import { Component } from '@angular/core';
+import { Injectable } from '@angular/core';
 
-interface Project {
+export interface Project {
   name: string;
   image_url?: string;
   description: string;
-  start_date?: string;
-  end_date?: string;
   status: "In Progress" | "Completed" | "On Hold";
   context: "Personal" | "Academic";
   techs: string[];
   github_url?: string;
+  isFavorite: boolean;
+  demoUrl?: string;
 }
 
-@Component({
-  selector: 'app-projects',
-  standalone: true,
-  imports: [],
-  templateUrl: './projects.component.html',
-  styleUrl: './projects.component.css'
+@Injectable({
+  providedIn: 'root'
 })
-export class ProjectsComponent {
+export class ProjectsService {
   public projects: Project[] = [
+    {
+      name: "Portfolio Website",
+      image_url: 'assets/projects/portfolio.png',
+      description: "A website to showcase my projects and skills",
+      status: "In Progress",
+      context: "Personal",
+      techs: ['Angular', 'Tailwind', 'Cloudflare'],
+      github_url: 'https://github.com/Marcus4420/my_portfolio',
+      isFavorite: true,
+      demoUrl: 'https://ellested.dev'
+    },
+    {
+      name: "Internship webscraper",
+      image_url: 'assets/projects/internship.png',
+      description: "A website that scrapes multiple job boards for internships and displays them in one place... Maybe I found you here?",
+      status: "In Progress",
+      context: "Personal",
+      techs: ['React', 'Tailwind', 'Cloudflare Worker', 'Cheerio', 'Bun'],
+      github_url: 'https://github.com/Marcus4420/internshipserve',
+      isFavorite: false,
+      demoUrl: 'https://internship.ellested.dev'
+    },
     {
       name: "Product Information Management system",
       image_url: 'assets/projects/pim.png',
@@ -28,7 +46,8 @@ export class ProjectsComponent {
       status: "Completed",
       context: "Academic",
       techs: ['Java', 'PostgreSQL', 'JavaFX'],
-      github_url: 'https://github.com/Marcus4420/PIM_second_semester'
+      github_url: 'https://github.com/Marcus4420/PIM_second_semester',
+      isFavorite: false,
     },
     {
       name: "Beer Bros",
@@ -37,7 +56,8 @@ export class ProjectsComponent {
       status: "Completed",
       context: "Academic",
       techs: ['Java', 'PostgreSQL', 'JavaFX'],
-      github_url: 'https://github.com/BeerBrewersSem3/SEMPRO3'
+      github_url: 'https://github.com/BeerBrewersSem3/SEMPRO3',
+      isFavorite: true,
     },
     {
       name: "Tauri Codepad",
@@ -46,7 +66,8 @@ export class ProjectsComponent {
       status: "In Progress",
       context: "Personal",
       techs: ['React', 'Rust', 'Tauri'],
-      github_url: 'https://github.com/Marcus4420/tauri-notepad'
+      github_url: 'https://github.com/Marcus4420/tauri-notepad',
+      isFavorite: false,
     },
     {
       name: "Level Up Library",
@@ -55,27 +76,22 @@ export class ProjectsComponent {
       status: "Completed",
       context: "Academic",
       techs: ['Laravel', 'Supabase', 'JavaScript'],
-      github_url: 'https://github.com/msundby/Level-Up-Library-Webtechnologies-SDU'
+      github_url: 'https://github.com/msundby/Level-Up-Library-Webtechnologies-SDU',
+      isFavorite: false,
     },
     {
       name: "DroneDudes",
       image_url: 'assets/projects/dronedudes.png',
       description: "A software system for controlling an assembly system simulation, supporting drone production and multiple robot scalability.",
-      start_date: "Present",
       status: "In Progress",
       context: "Academic",
       techs: ['Java Spring Boot', 'Angular', 'Tailwind', 'PostgreSql'],
-      github_url: 'https://github.com/DroneDudes/SEMPRO4'
-    },
-    {
-      name: "Portfolio Website",
-      image_url: 'assets/projects/portfolio.png',
-      description: "A website to showcase my projects and skills",
-      start_date: "Jan 2024",
-      status: "In Progress",
-      context: "Personal",
-      techs: ['Angular', 'Tailwind', 'Cloudflare'],
-      github_url: 'https://github.com/Marcus4420/my_portfolio'
+      github_url: 'https://github.com/DroneDudes/SEMPRO4',
+      isFavorite: true,
     },
   ];
+
+  public getProjects() {
+    return this.projects;
+  }
 }
