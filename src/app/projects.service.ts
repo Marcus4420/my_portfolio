@@ -34,8 +34,8 @@ export class ProjectsService {
       description: "A website that scrapes multiple job boards for internships and displays them in one place... Maybe I found you here?",
       status: "In Progress",
       context: "Personal",
-      techs: ['React', 'Tailwind', 'Cloudflare Worker', 'Cheerio', 'Bun'],
-      github_url: 'https://github.com/Marcus4420/internshipserve',
+      techs: ['Angular', 'Tailwind', 'Cloudflare Worker', 'Cheerio', 'Bun'],
+      github_url: 'https://github.com/Marcus4420/internshipwebapp',
       isFavorite: false,
       demoUrl: 'https://internship.ellested.dev'
     },
